@@ -1,0 +1,71 @@
+You are web3 developer that wants to show us how to create a smart contract. The goal is simple, users will select a location to start the contract, the contract closing condition will be to monitor if a hurricane ever reaches with 50km from location selected by the user. This will be a base model for an insurance contract but you are teaching new developers so we will take it by steps.
+
+Make a simple smart contract that will use weather data to complete the contract. 
+
+We will use oracolize the weather data from the weather api.
+
+The contract will be complete when the a hurricane reaches the Coordinates the user ensured. 
+
+Gpt
+
+Creating a smart contract that monitors the proximity of a hurricane to a specified location and triggers a contract closing condition when the hurricane is within 50km of that location is a complex task. It involves not just smart contract development but also integrating external data sources, as blockchains like Ethereum do not have native access to real-world data. Here's an outline of how you can approach this task, which can serve as a tutorial for new developers:
+Step 1: Understanding the Basics of Smart Contracts
+
+    Language: Smart contracts on Ethereum are typically written in Solidity, a language specifically designed for Ethereum Smart Contracts.
+    Environment Setup: Use tools like Truffle or Hardhat for development, testing, and deployment of smart contracts.
+
+Step 2: Integrating External Data with Oracles
+
+    Since blockchains cannot directly access external data, you need an oracle to fetch real-world data (hurricane location in this case) and provide it to the smart contract.
+    Chainlink: Consider using Chainlink, a decentralized oracle network that allows smart contracts to securely interact with external data feeds.
+
+Step 3: Designing the Smart Contract
+
+    Location Input: The contract should allow users to input or select a location (latitude and longitude).
+    Oracle Integration: Implement functionality to regularly check the location of hurricanes through an oracle.
+    Proximity Check: The contract should include logic to calculate the distance between the hurricane's location and the user-selected location.
+    Trigger Condition: If a hurricane comes within 50km of the specified location, the contract should execute the closing condition.
+
+Step 4: Implementing the Smart Contract
+
+    Initialize Project: Set up your project using a framework like Truffle or Hardhat.
+    Write the Contract:
+        Define variables for user location and a threshold distance (50km).
+        Implement a function for users to set their location.
+        Implement a function that is called by the Chainlink oracle to update the hurricane location.
+        Calculate the distance and compare it with the threshold. If the condition is met, trigger the closing event.
+
+Step 5: Testing
+
+    Develop unit tests to ensure the contract behaves as expected.
+    Test the contract on a local Ethereum blockchain like Ganache.
+
+Step 6: Deploying
+
+    After thorough testing, deploy the contract to a testnet (like Ropsten or Rinkeby).
+    Once fully tested on testnet, deploy to the Ethereum mainnet.
+
+Step 7: Front-End Integration
+
+    Develop a front-end interface to interact with the smart contract, using web3.js or ethers.js.
+    Allow users to input their location and display relevant contract information.
+
+Step 8: Monitoring and Maintenance
+
+    Monitor the contract's performance and oracle responses.
+    Plan for maintenance and updates as necessary.
+
+Example Solidity Code Snippet
+
+Here's a basic structure in Solidity to get started (this is a simplified version and does not include the full oracle integration):
+
+redline_v1.sol
+
+This code outlines a basic structure. The updateHurricaneLocation function should ideally be called by an oracle like Chainlink, which fetches the current hurricane location and feeds it to the contract. The distance calculation logic needs to be implemented in isWithinThreshold.
+Note
+
+    Ensure thorough testing, especially since this involves real-world data and potentially significant financial transactions.
+    Consider the gas costs associated with frequent updates and oracle calls.
+    Keep in mind the legal and regulatory aspects of creating an insurance-like contract.
+
+This project, combining smart contract development with external data integration, can be an excellent learning experience for new developers in the field of blockchain and smart contract development.
