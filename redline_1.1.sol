@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./ABDKMathQuad.sol"; // Import the ABDKMathQuad library
+import "ABDKMathQuad.sol"; // Import the ABDKMathQuad library
 
 contract IndividualInsuranceContract {
     struct Location {
