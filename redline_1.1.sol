@@ -28,7 +28,7 @@ contract IndividualInsuranceContract {
 
     // Function for user to set their location// Function to enable or disable mock mode (onlyOwner modifier is recommended)
     function setMockMode(bool _isEnabled) public {
-        isMockModeEnabled = _isEnabled;
+        bool isMockModeEnabled = _isEnabled;
     }
     // Modified updateHurricaneLocation function to accept mock data if mock mode is enabled
     function updateHurricaneLocation(uint256 _latitude, uint256 _longitude) external {
