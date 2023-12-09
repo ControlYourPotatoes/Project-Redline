@@ -1,0 +1,11 @@
+[
+    { "time": "00:00", "latitude": 18500000, "longitude": -65500000 },
+    { "time": "00:15", "latitude": 18400000, "longitude": -65700000 },
+    { "time": "00:30", "latitude": 18300000, "longitude": -65900000 },
+    { "time": "00:45", "latitude": 18200000, "longitude": -66100000 },
+    { "time": "01:00", "latitude": 18100000, "longitude": -66300000 },
+    { "time": "01:15", "latitude": 18000000, "longitude": -66500000 },
+    { "time": "01:30", "latitude": 17900000, "longitude": -66700000 },
+    { "time": "01:45", "latitude": 17800000, "longitude": -66900000 },
+    { "time": "02:00", "latitude": 17700000, "longitude": -67100000 }
+]
